@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:wght@400&display=swap');
+
+body,
+* {
+    font-family: 'Jaro', sans-serif;
+    font-weight: 400;
+    /* Regular weight */
+    /* letter-spacing: -3%; */
+}
+
+.nav-log {
+    background: red;
+    padding: 6px 12px;
+}
+
+.navbar {
+    z-index: 10;
+    /* transform: scale(.5); */
+}
+
+.navbar-animation {
+    z-index: 10;
+    transform: scale(.5);
+    animation: zoomheader 8s ease-in-out forwards;
+}
+
+
+.landing {
+    position: relative;
+    /* Required for pseudo-element positioning */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* Prevent scrollbars during animation */
+    /* Remove background-image and animation from here */
+}
+
+.landing .background-layer {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("./assets/images/background-1.png"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: zoomInFade 8s ease-in-out forwards;
+    z-index: -1;
+    /* Place behind .landing content */
+}
+
+.landing-logo,
+.box-text {
+    transform: scale(.5);
+    animation: zoomtext 8s ease-in-out forwards;
+}
+
+.logo-img {
+    padding-top: 120px !important;
+}
+
+.landing-logo {
+    max-width: 400px;
+}
+
+.heed-text {
+    color: #FFD933;
+}
+
+.sm-text {
+    font-size: 11px !important;
+}
+
+.small-text {
+    width: fit-content;
+}
+
+/* about-us */
+
+.about-us {
+    background-image: url("./assets/images/about-bg.jpeg");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-info {
+    width: fit-content;
+    padding: 2px 15px;
+    border-radius: 12px;
+    position: absolute;
+    font-weight: bold;
+}
+
+.Who {
+    top: 49px;
+    transform: rotate(30deg) !important;
+    left: 45px;
+}
+
+.Projects {
+    top: 27px;
+    left: 50%;
+}
+
+.Services {
+    bottom: -12px;
+    left: 30%;
+
+}
+
+.our-team {
+    top: 45%;
+    transform: rotate(30deg) !important;
+    right: 45px;
+    z-index: 1;
+}
+
+.rightImge {
+    position: absolute;
+    right: 0;
+    top: 58%;
+}
+
+@keyframes zoomInFade {
+    0% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    10% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomtext {
+    0% {
+        transform: scale(.5);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomheader {
+    0% {
+        top: 70px;
+        transform: scale(.5);
+        opacity: 0.9;
+    }
+
+    100% {
+        top: 0;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
